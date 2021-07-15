@@ -73,6 +73,7 @@ class VendorController extends Controller
      */
     public function edit($id)
     {
+        
         $vendor = Vendor::findOrFail($id);
         return view('vendors.edit',compact('vendor'));
     }

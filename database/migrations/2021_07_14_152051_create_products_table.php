@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('product_custom_id',100);
             $table->string('product_name',100);
             $table->double('product_prize');
+            $table->string('vendor_name',50);
             $table->string('product_category',50);
             $table->string('product_brand',50);
             $table->integer('product_quantity');

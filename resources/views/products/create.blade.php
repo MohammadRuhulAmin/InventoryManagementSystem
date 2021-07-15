@@ -58,6 +58,14 @@
                  </div>
 
                  <div class="form-group">
+                  <label for="exampleInputEmail1">Vendor </label>
+                  <select name="vendor_name" class="browser-default custom-select">
+                      @foreach ($vendorList as $vendor)
+                        <option >{{$vendor->vendor_name}}</option>
+                      @endforeach
+                  </select>
+
+                 <div class="form-group">
                   <label for="exampleInputEmail1">Product Category</label>
                   <select name="product_category" class="browser-default custom-select">
                       @foreach ($categoryList as $category)
