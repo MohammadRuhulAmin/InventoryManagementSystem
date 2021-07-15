@@ -58,21 +58,27 @@
                  </div>
 
                  <div class="form-group">
-                    <label for="">Product Category</label>
-                    <input type="text" name="product_category" class="form-control"  placeholder="Enter Product Category">
-                   
-                 </div>
+                  <label for="exampleInputEmail1">Product Category</label>
+                  <select name="product_category" class="browser-default custom-select">
+                      @foreach ($categoryList as $category)
+                        <option >{{$category->name}}</option>
+                      @endforeach
+                  </select>
 
                  <div class="form-group">
                     <label for="exampleInputEmail1">Product Brand</label>
-                    <input type="text" name="product_brand" class="form-control"  placeholder="Enter Product Brand">
-                 </div>
+                    <select name="product_brand" class="browser-default custom-select">
+                        @foreach ($brandsList as $brand)
+                          <option >{{$brand->name}}</option>
+                        @endforeach
+                    </select>
+                  </div>
 
                  <div class="form-group">
-                    <label for="exampleInputEmail1">Product Stock</label>
-                    <input type="text" name="product_stock" class="form-control"  placeholder="Enter Product Stock">
-                    @if($errors->has('product_stock'))
-                        <span  class="text-danger">Product Stock must be a Number </span>
+                    <label for="exampleInputEmail1">Product Quantity</label>
+                    <input type="text" name="product_quantity" class="form-control"  placeholder="Enter Product Quantity">
+                    @if($errors->has('product_quantity'))
+                        <span  class="text-danger">Product Quantity must be a Number </span>
                     @endif
                  </div>
 
@@ -104,85 +110,15 @@
                  </div>
 
                  <div class="form-group">
-                    <label for="exampleInputEmail1">Product Death Date</label>
-                    <input type="date" name="product_warenti_date" class="form-control" >
-                   
-                 </div>
-
-                 <div class="jumbotron">
-                     <h3 >Product Vendor Information</h3>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Vendor Name of  Product </label>
-                        <input type="text" name="vendor_name" class="form-control" placeholder="Enter the Vendor Name of Product" >
-                       
-                        @if($errors->has('vendor_name'))
-                            <span  class="text-danger">Enter a Vendor Name</span>
-                        @endif
-                     </div>
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Vendor Contact Number </label>
-                        <input type="text" name="vendor_name" class="form-control" placeholder="Enter the Vendor Contact Number" >
-                       
-                        @if($errors->has('vendor_name'))
-                            <span  class="text-danger">Insert  Vendor Contact Number </span>
-                        @endif
-                     </div>
-
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Vendor Details </label>
-                        <textarea name="product_details" class="form-control"></textarea>
-                       
-                        @if($errors->has('product_custom_id'))
-                            <span  class="text-danger">details of the Vendor  </span>
-                        @endif
-                     </div>
-                 </div>
-                 <div class="jumbotron">
-                    <h3>Product Service Location & Information</h3>
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Product Use Location </label>
-                        <input type="text" name="product_use_location" class="form-control" placeholder="Enter The location " >
-                       
-                        @if($errors->has('product_use_location'))
-                            <span  class="text-danger">Product Use Location Details </span>
-                        @endif
-                     </div>
-
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Product Use Location Details </label>
-                        <input type="text" name="product_use_location_details" class="form-control" placeholder="Enter The location  Details" >
-                       
-                        @if($errors->has('product_use_location'))
-                            <span  class="text-danger">Product Use Location Details   </span>
-                        @endif
-                     </div>
-
-                     <div class="form-group">
-                        
-                        <label for="exampleInputEmail1">Product Service Status </label>
-                        <input type="text" name="product_service_status" class="form-control" placeholder="Product Service Status" >
-                       
-                        @if($errors->has('product_service_status'))
-                            <span  class="text-danger">Product Service Status   </span>
-                        @endif
-                     </div>
-                     <div class="form-group">
-                        <label for="exampleInputEmail1">Product Review </label>
-                        <textarea name="product_review" class="form-control"></textarea>
-                       
-                        @if($errors->has('product_review'))
-                            <span  class="text-danger">Review of The Product  </span>
-                        @endif
-                     </div>
-
-
-
-
-                 </div>
-
-
+                  <label for="exampleInputEmail1">Product Death Date</label>
+                  <input type="date" name="product_death_date" class="form-control" >
                  
+                  @if($errors->has('product_death_date'))
+                      <span  class="text-danger">Insert a Valid  Death Date of that Product</span>
+                  @endif
+               </div>
 
+              
 
                   
                 <div class="card-footer">

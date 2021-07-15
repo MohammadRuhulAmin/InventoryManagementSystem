@@ -21,22 +21,22 @@ class CreateProductsTable extends Migration
             $table->double('product_prize');
             $table->string('product_category',50);
             $table->string('product_brand',50);
-            $table->integer('product_stock');
+            $table->integer('product_quantity');
             $table->longText('product_details');
             $table->date('product_purchace_date');
             $table->date('product_warenti_date');
             $table->date('product_death_date')->nullable();
 
 
-            $table->string('vendor_name');
-            $table->string('vendor_contact');
-            $table->longText('vendor_details');
+            // $table->string('vendor_name');
+            // $table->string('vendor_contact');
+            // $table->longText('vendor_details');
 
             
-            $table->longText('product_use_location');
-            $table->longText('product_use_location_details')->nullable();
-            $table->string('product_service_status');
-            $table->longText('product_review');
+            // $table->longText('product_use_location');
+            // $table->longText('product_use_location_details')->nullable();
+            // $table->string('product_service_status');
+            // $table->longText('product_review');
 
 
             $table->timestamps();

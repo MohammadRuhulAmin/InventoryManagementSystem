@@ -3,6 +3,7 @@
 use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VendorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,10 @@ Route::middleware(['auth:sanctum'])->group(function(){
     Route::resource('brands',BrandsController::class);
 
     //Product 
-    Route::resource('products', ProductController::class);
+    Route::resource('products', ProductController::class); 
+
+    //Vendors 
+    Route::resource('vendors', VendorController::class);
 });
 
 

@@ -61,6 +61,13 @@
                 </a>
               </li>
 
+              <li class="nav-item">
+                <a href="{{route('vendors.index')}}" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Vendor</p>
+                </a>
+              </li>
+
 
 
 
